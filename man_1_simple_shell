@@ -5,7 +5,7 @@
 .SH NAME
 .B simple shell
 \
-- simple UNIX command interpreter 
+- simple UNIX command interpreter
 
 .SH SYNOPSIS
 .B simple shell\fR [\fIfilename\fR]
@@ -14,9 +14,9 @@
 Our
 .B simple shell
 was modeled after the
-.B Bourne shell 
-(/bin/sh). The simple shell's purpose is to read commands from either a terminal (standard input) or a file, and execute them just as the 
-.B Bourne shell 
+.B Bourne shell
+(/bin/sh). The simple shell's purpose is to read commands from either a terminal (standard input) or a file, and execute them just as the
+.B Bourne shell
 would.
 
 .SH ENVIRONMENT
@@ -28,15 +28,15 @@ is an array of
 .I name-value
 strings describing variables in the format
 .I NAME=VALUE
-. 
+.
 
 .SH PARAMETERS
-A 
+A
 .I parameter
-is an entity that stores values. It can be a 
+is an entity that stores values. It can be a
 .I name
 , a number, or one of the special characters listed below.
-.PP 
+.PP
 The following
 .I parameters
 are automatically set by the shell.
@@ -52,7 +52,7 @@ The process number of this shell
 The process number of the last background command invoked
 .IP c
 Print a character.
-.PP 
+.PP
 The following
 .I parameters
 are used but not set by the shell.

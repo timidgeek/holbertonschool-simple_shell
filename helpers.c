@@ -50,7 +50,7 @@ char **split_string(char *str, const char *delim)
 
 /**
 * execute - fork() and execve()
-* @cmd - an array of command and its parameters
+* @cmd: an array of command and its parameters
 */
 void execute(char **cmd)
 {

@@ -1,0 +1,87 @@
+./ This is the manpage of our simple shell
+.TH SIMPLE SHELL
+.DD 12/08/2022
+
+.SH NAME
+.B simple shell
+\
+- simple UNIX command interpreter 
+
+.SH SYNOPSIS
+.B simple shell\fR [\fIfilename\fR]
+
+.SH DESCRIPTION
+Our
+.B simple shell
+was modeled after the
+.B Bourne shell 
+(/bin/sh). The simple shell's purpose is to read commands from either a terminal (standard input) or a file, and execute them just as the 
+.B Bourne shell 
+would.
+
+.SH ENVIRONMENT
+Upon invocation, our
+.B simple shell
+Receives and copies the environment of the parent process in which it was executed. This
+.B environment
+is an array of
+.I name-value
+strings describing variables in the format
+.I NAME=VALUE
+. 
+
+.SH PARAMETERS
+A 
+.I parameter
+is an entity that stores values. It can be a 
+.I name
+, a number, or one of the special characters listed below.
+.PP 
+The following
+.I parameters
+are automatically set by the shell.
+.IP #
+The number of positional parameters
+.IP -
+Options supplied to the shell on invocation
+.IP ?
+The value returned by the last executed command
+.IP $
+The process number of this shell
+.IP !
+The process number of the last background command invoked
+.IP c
+Print a character.
+.PP 
+The following
+.I parameters
+are used but not set by the shell.
+.IP HOME
+The default argument (home directory) for the
+.B cd
+command
+.IP PATH
+The search path for commands
+.IP MAIL
+If this variable is set to the name of a mail file then the shell informs the user of the arrival of mail in the specified file
+
+.SH RETURN VALUE
+Upon success, the
+.B simple shell
+will return the exit status of the last command executed, unless a syntax error occurs.
+
+.SH EXAMPLE
+To enter the
+.B simple shell
+, one would run the
+.I executable file
+in the terminal. From there, one is able to run basic
+.I shell commands
+such as the following:
+.IP
+$ ls
+.IP
+main     man_1_ simple_shell     README.md     AUTHORS     main.c     shell.h
+
+.SH AUTHOR
+Written by Lindsey Thomas.

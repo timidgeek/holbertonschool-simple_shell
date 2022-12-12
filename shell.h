@@ -9,6 +9,19 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <errno.h>
+#define PROMPT "$ "
+#define DELIM " \n"
+
 /* --- structures --- */
-/* --- prototypes --- */
+
+/* --- environment prototypes --- */
+extern char **environ;
+
+/* --- helpers.c --- */
+char **split_string(char *str, const char *delim);
+void execute(char **cmd);
+
+/* --- built-in commands --- */
+char *prompt(char *p);
+
 #endif /* SHELL_H */

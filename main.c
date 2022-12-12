@@ -25,12 +25,6 @@ int main(int argc, char **argv)
 		if (command == NULL)
 			return (-1);
 
-		if (command_copy == NULL)
-		{
-			perror("bash: memory allocation error");
-			return (-1);
-		}
-
 		/* split command line and execute */
 		cmd_exec = split_string(command, DELIM);
 		if (cmd_exec == NULL)

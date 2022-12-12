@@ -56,22 +56,16 @@ void execute(char **cmd)
 {
 	pid_t child_pid = fork();
 	int status;
+	char *command;
+	char **argv;
 
-	if (child_pid = 0)
+	if (child_pid == 0)
 	{
-		execvp(cmd[0], cmd);
-		perror("Error");
-		exit(1);
+		command = argv[0];
+		if (execve(command, argv, NULL) == -1)
+			perror("Error");
 	}
 
-	else if (child_pid > 0)
-	{
-		do
-			waitpid(child_pid, &status, WUNTRACED);
-		while
-			(!WIFEXITED(status) && !WIFSIGNALED(status));
-	}
-
-	else
-		perror("Error");
+	if (child_pid > 0)
+		wait(&status);
 }
